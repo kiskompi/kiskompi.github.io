@@ -53,21 +53,21 @@
                     }
                     $('b:empty').remove();
                     $('p:empty').remove();
+                    const imgs = ['showcase-1.jpg','showcase-2.jpg','showcase-3.jpg', 'showcase-4.jpg','showcase-5.jpg','showcase-6.jpg','showcase-7.jpg'];
 
                     var template1 = `<section class="feature-list section">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="content mt-100">
-                                                        <h4 id="apostol2-head" class="subheading">
-                                                            HEADHOLDER
-                                                        </h4>
-                                                        <div id="apostol2">PLACEHOLDER</div>
+                                                <div class="col-md-12">
+                                                    <h4 id="olvasmany-head" class="subheading">
+                                                        HEADHOLDER
+                                                    </h4>
+                                                    <div id="olvasmany">
+                                                        <img align="right" class="img-responsive icon" src="images/IMGHOLDER" alt="">
+                                                        <p>PLACEHOLDER</p>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 text-center">
-                                                    <img class="img-responsive" src="images/showcase-3.png" alt="">
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </section>`
@@ -75,10 +75,12 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-6 text-center">
-                                                    <img src="images/watch.png" alt="">
+                                                    <div class="image-content content mt-100">
+                                                        <img src="images/IMGHOLDER" alt="">
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="content mt-100">
+                                                    <div class="text content mt-100">
                                                         <h2 id="olvasmany-head" class="subheading">HEADHOLDER</h2>
                                                         <div id="olvasmany">PLACEHOLDER</div>
                                                     </div>
@@ -90,13 +92,16 @@
                     var headers = $('h2')
                     var pars = $('p')
                     $.each (headers, function(i, head){
+                        const rand = Math.floor(Math.random()*imgs.length);
                         if ((i % 2)==0) {
                             var text = template1.replace('HEADHOLDER', head.innerHTML);
                                 text = text.replace("PLACEHOLDER", $('p').get(i).innerHTML);
+                                text = text.replace("IMGHOLDER", imgs[rand]);
                             $('body').append(text);
                         } else {
                             var text = template2.replace('HEADHOLDER', head.innerHTML).replace("PLACEHOLDER", $('p').get(i).innerHTML)
                                 text = text.replace("PLACEHOLDER", $('p').get(i).innerHTML);
+                                text = text.replace("IMGHOLDER", imgs[rand]);
                             $('body').append(text);
                         }
                     })
@@ -130,16 +135,16 @@
               <div class="collapse navbar-toggleable-md" id="navbarResponsive">
                 <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
                   <li class=" active">
-                    <a href="#">KEZDŐLAP</a>
+                    <a href="index.html">KEZDŐLAP</a>
                   </li>
                   <li class="">
-                    <a href="#about">NAPI ELMÉLKEDÉS</a>
+                    <a href="elmelkedes.html">NAPI ELMÉLKEDÉS</a>
                   </li>
                   <li class="">
-                    <a href="#service">BÖJTI FEGYELEM</a>
+                    <a href="fegyelem.html">BÖJTI FEGYELEM</a>
                   </li>
                   <li class="">
-                    <a href="#contact">KAPCSOLAT</a>
+                    <a href="kapcsolat.html">KAPCSOLAT</a>
                   </li>
                 </ul>
               </div>

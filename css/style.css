@@ -433,3 +433,39 @@ footer {
         text-decoration: none; }
 
 /* ----------- CUSTOM --------------- */
+.img-responsive {
+  padding-left: 10px;
+  float: right;
+}
+
+.icon{
+  width: 40%;
+  margin: 30px;
+}
+
+#olvasmany {
+  float: left;
+  width: 100%;
+  text-align: justify;
+}
+
+.promo-details{
+  background-color: #751102;
+  color: #ddb667;
+}
+
+.promo-details .subheading {
+  color: #ddb667;
+}
+.navigation, .navbar {
+  padding: 0;
+  padding-top: 20px;
+}
+
+.image-content{
+  display: flex!important;
+}
+
+.text .mt-100{
+  display: inline;
+}
