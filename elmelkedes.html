@@ -31,7 +31,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-                $('#daily').load('http://cors-anywhere.herokuapp.com/https://hd.gorogkatolikus.hu/napi-evangelium #tartalom .szoveg', function() {
+                $('#daily').load('https://cors-anywhere.herokuapp.com/https://hd.gorogkatolikus.hu/napi-evangelium #tartalom .szoveg', function() {
                     $("#utasitaskiegeszites").remove ();
                     $(".szoveg").contents().filter( "br" ).remove();
                     $(".szoveg").contents().filter( "b" ).wrapInner("<h2></h2>");
@@ -104,7 +104,7 @@
                     pars.empty()
                 });
                     
-                $('#zsolozsma').load('http://cors-anywhere.herokuapp.com/https://hd.gorogkatolikus.hu/napi-evangelium #tartalom .hirdetes');
+                $('#zsolozsma').load('https://cors-anywhere.herokuapp.com/https://hd.gorogkatolikus.hu/napi-evangelium #tartalom .hirdetes');
             });
         </script>
     </head>
