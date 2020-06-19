@@ -469,3 +469,11 @@ footer {
 .text .mt-100{
   display: inline;
 }
+
+.navbar-brand.logo{
+  background-image: url("../images/icon.jpg");
+  background-size: 50px 50px;
+  background-position: left;
+  padding-left: 45px;
+  background-repeat: no-repeat;
+}
